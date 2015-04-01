@@ -49,11 +49,11 @@ namespace Logistics.Infrastructure.Repositories
 
 		public void DeleteUser(int Id)
 		{
-			foreach (var delivery in users)
+			foreach (var user in users)
 			{
-				if (delivery.Id == Id)
+				if (user.Id == Id)
 				{
-					users.Remove(delivery);
+					users.Remove(user);
 					return;
 				}
 			}
@@ -61,9 +61,9 @@ namespace Logistics.Infrastructure.Repositories
 
 		public User FindUser (int Id)
 		{
-			foreach (var delivery in users)
-				if (delivery.Id == Id)
-					return delivery;
+			foreach (var user in users)
+				if (user.Id == Id)
+					return user;
 			return null;
 		}
 
@@ -72,34 +72,34 @@ namespace Logistics.Infrastructure.Repositories
 			return users;
 		}
 
-		public void InsertRole(Order Order)
+		public void InsertRole(Role Role)
 		{
-			ordersList.Add(Order);
+			roles.Add(Role);
 		}
 
 		public void DeleteRole(int Id)
 		{
-			foreach (var delivery in ordersList)
+			foreach (var role in roles)
 			{
-				if (delivery.Id == Id)
+				if (role.Id == Id)
 				{
-					ordersList.Remove(delivery);
+					roles.Remove(role);
 					return;
 				}
 			}
 		}
 
-		public Order FindRole (int Id)
+		public Role FindRole (int Id)
 		{
-			foreach (var delivery in ordersList)
-				if (delivery.Id == Id)
-					return delivery;
+			foreach (var role in roles)
+				if (role.Id == Id)
+					return role;
 			return null;
 		}
 
-		public List<Order> FindAllRoles()
+		public List<Role> FindAllRoles()
 		{
-			return ordersList;
+			return roles;
 		}
 
     }

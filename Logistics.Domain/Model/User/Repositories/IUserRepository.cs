@@ -8,13 +8,13 @@ namespace Logistics.Domain.Model.User.Repositories
 {
     interface IUserRepository
     {
-        void Insert(User User);
+        void InsertUser(User User);
 
-        void Delete(int id);
+        void DeleteUser(int id);
 
-        User Find(int id);
+        User FindUser(int id);
 
-        List<User> FindAll();
+        List<User> FindAllUsers();
 
         void InsertRole(Role role);
 

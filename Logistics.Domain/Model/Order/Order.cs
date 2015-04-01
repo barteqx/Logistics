@@ -13,8 +13,13 @@ namespace Logistics.Domain.Model.Order
 
         public List<OrderRecord> OrderItems { get; set; }
 
-        public List<OrderStatus> OrderHistory { get; set; }
+        public List<OrderStatus> OrderHistory { get; }
 
         public string OrderId { get; set; }
+
+		public void ModifyStatus (OrderStatus Status)
+		{
+			OrderHistory.Add (Status);
+		}
     }
 }
