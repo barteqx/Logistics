@@ -8,5 +8,12 @@ namespace Logistics.Domain.Model.Order.Repositories
 {
     interface IOrderRepository
     {
+		void Insert(Order Order);
+
+		void Delete(int id);
+
+		Order Find(int id);
+
+		List<Order> FindAll();
     }
 }
