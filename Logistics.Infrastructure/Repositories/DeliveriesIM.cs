@@ -13,6 +13,7 @@ namespace Logistics.Infrastructure.Repositories
 {
     public class DeliveriesIM : IDeliveryRepository
     {
+
         public List<Delivery> deliveriesList;
 
         public DeliveriesIM()
