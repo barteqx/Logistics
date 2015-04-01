@@ -17,5 +17,14 @@ namespace Logistics.Domain.Model.Delivery
         public List<DeliveryRecord> DeliveryItems { get; set; }
 
         public DateTime Date { get; set; }
+
+		public void AddOrderItem(OrderItem OrderItem)
+		{
+			DeliveryItems.Add (OrderItem);
+		}
+
+		public void DeleteOrderItem(int Id)
+		{
+		}
     }
 }

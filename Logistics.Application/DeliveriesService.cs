@@ -24,7 +24,7 @@ namespace Logistics.Application
             this.deliveryRepository = deliveryRepository;
         }
 
-        public IList<Domain.Model.Delivery.Delivery> GetAllDeliverys()
+        public IList<Domain.Model.Delivery.Delivery> GetAllDeliveries()
         {
             return deliveryRepository.FindAll();
         }
@@ -33,5 +33,15 @@ namespace Logistics.Application
         {
             deliveryRepository.Insert(p);
         }
+
+		public Delivery FindDelivery(int Id)
+		{
+			deliveryRepository.FindDelivery (Id);
+		}
+
+		public void DeleteDelivery(int Id)
+		{
+			deliveryRepository.Delete (Id);
+		}
     }
 }

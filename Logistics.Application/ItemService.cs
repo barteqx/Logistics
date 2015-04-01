@@ -9,6 +9,12 @@ namespace Logistics.Application
 {
     class ItemService : IItemService
     {
-        
+		public void CreateItem(Item order);
+
+		public void AlterItem(Item order);
+
+		public void DestroyItem(Item order);
+
+		public List<Item> GetAllItems();
     }
 }
