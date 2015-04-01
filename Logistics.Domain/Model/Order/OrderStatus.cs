@@ -29,6 +29,6 @@ namespace Logistics.Domain.Model.Order
 
         public string Comment { get; set; }
 
-        public User.User ModifiedBy { get; set; }
+        public int ModifiedBy { get; set; }
     }
 }

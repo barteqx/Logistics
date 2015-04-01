@@ -20,7 +20,7 @@ namespace Logistics.Infrastructure.Repositories
         {
             deliveriesList = new List<Delivery>
             {
-                new Delivery { Id = 1, Accepted = false, Date = DateTime.Now, DeliveryItems = new List<DeliveryRecord> {
+                new Delivery { Id = 1, Accepted = false, Date = DateTime.Now, DeliveryRecords = new List<DeliveryRecord> {
                     new DeliveryRecord { Id = 1, OrderItemId = 1, Quantity = 2 }}
                 }
             };

@@ -12,7 +12,7 @@ namespace Logistics.Domain.Model.Order
     {
         public int Id { get; set; }
 
-        public Item.Item OrderItem { get; set; }
+        public int OrderItem { get; set; }
 
         public int Quantity { get; set; }
     }

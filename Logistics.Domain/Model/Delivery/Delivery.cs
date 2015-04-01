@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Logistics.Domain.Model.Delivery
 {
     public class Delivery
@@ -14,17 +13,20 @@ namespace Logistics.Domain.Model.Delivery
 
         public string From { get; set; }
 
-        public List<DeliveryRecord> DeliveryItems { get; set; }
+        public List<DeliveryRecord> DeliveryRecords { get; set; }
 
         public DateTime Date { get; set; }
 
-		public void AddOrderItem(OrderItem OrderItem)
+		public void AddDeliveryRecord(DeliveryRecord DeliveryRecord)
 		{
-			DeliveryItems.Add (OrderItem);
+			DeliveryRecords.Add (DeliveryRecord);
 		}
 
-		public void DeleteOrderItem(int Id)
+		public void DeleteDeliveryRecord(int Id)
 		{
+            foreach (var item in DeliveryRecords)
+                if (item.Id == Id)
+                    DeliveryRecords.Remove(item);
 		}
     }
 }
