@@ -24,11 +24,11 @@ namespace Logistics.Infrastructure.Repositories
             roles = new List<Role>
             {
                 new Role {Id = 100, RoleName = "Administrator", CanCreateAlterDeleteItems = true, CanCreateAlterDeleteUsers = true,
-                    CanCreateAlterDeleteRoles = true, CanCreateAlterDeleteOrders = true, CanSendOrders = true},
+                    CanCreateAlterDeleteRoles = true, CanCreateAlterDeleteUsers = true, CanSendUsers = true},
                 new Role {Id = 101, RoleName = "Manager", CanCreateAlterDeleteItems = true, CanCreateAlterDeleteUsers = false,
-                    CanCreateAlterDeleteRoles = false, CanCreateAlterDeleteOrders = true, CanSendOrders = true},
+                    CanCreateAlterDeleteRoles = false, CanCreateAlterDeleteUsers = true, CanSendUsers = true},
                 new Role {Id = 101, RoleName = "Manager", CanCreateAlterDeleteItems = false, CanCreateAlterDeleteUsers = false,
-                    CanCreateAlterDeleteRoles = false, CanCreateAlterDeleteOrders = false, CanSendOrders = true}
+                    CanCreateAlterDeleteRoles = false, CanCreateAlterDeleteUsers = false, CanSendUsers = true}
             };
 
             users = new List<User>
@@ -42,7 +42,65 @@ namespace Logistics.Infrastructure.Repositories
             };
         }
 
+		public void InsertUser(User User)
+		{
+			users.Add(User);
+		}
 
+		public void DeleteUser(int Id)
+		{
+			foreach (var delivery in users)
+			{
+				if (delivery.Id == Id)
+				{
+					users.Remove(delivery);
+					return;
+				}
+			}
+		}
+
+		public User FindUser (int Id)
+		{
+			foreach (var delivery in users)
+				if (delivery.Id == Id)
+					return delivery;
+			return null;
+		}
+
+		public List<User> FindAllUsers()
+		{
+			return users;
+		}
+
+		public void InsertRole(Order Order)
+		{
+			ordersList.Add(Order);
+		}
+
+		public void DeleteRole(int Id)
+		{
+			foreach (var delivery in ordersList)
+			{
+				if (delivery.Id == Id)
+				{
+					ordersList.Remove(delivery);
+					return;
+				}
+			}
+		}
+
+		public Order FindRole (int Id)
+		{
+			foreach (var delivery in ordersList)
+				if (delivery.Id == Id)
+					return delivery;
+			return null;
+		}
+
+		public List<Order> FindAllRoles()
+		{
+			return ordersList;
+		}
 
     }
 }
