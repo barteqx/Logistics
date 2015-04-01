@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 using Logistics.Domain.Model.Delivery.Repositories;
 using Logistics.Domain.Model.Delivery;
 
