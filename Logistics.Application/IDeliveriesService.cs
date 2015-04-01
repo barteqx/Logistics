@@ -13,5 +13,9 @@ namespace Logistics.Application
         IList<Delivery> GetAllDeliveries();
 
         void CreateNewDelivery(Delivery delivery);
+
+		Delivery FindDelivery (int Id);
+
+		void DeleteDelivery (int Id);
     }
 }

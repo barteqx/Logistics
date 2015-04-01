@@ -36,7 +36,7 @@ namespace Logistics.Application
 
 		public Delivery FindDelivery(int Id)
 		{
-			deliveryRepository.FindDelivery (Id);
+			deliveryRepository.Find (Id);
 		}
 
 		public void DeleteDelivery(int Id)
