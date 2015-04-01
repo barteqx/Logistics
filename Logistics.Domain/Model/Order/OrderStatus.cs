@@ -8,9 +8,9 @@ using Logistics.Domain.Model.User;
 
 namespace Logistics.Domain.Model.Order
 {
-    class OrderStatus
+    public class OrderStatus
     {
-        enum OrderState
+        public enum OrderState
         {
             AwaitngAcceptance,
             Accepted,

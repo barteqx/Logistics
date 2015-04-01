@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Logistics.Domain.Model.Item.Repositories;
+using Logistics.Domain.Model.Item;
 
 namespace Logistics.Infrastructure.Repositories
 {
@@ -16,10 +17,7 @@ namespace Logistics.Infrastructure.Repositories
 		{
 			itemsList = new List<Item>
 			{
-				new Item { Id = 1, From = "Apple", ItemItems = new List<ItemRecord>{
-						new ItemRecord { Id = 1, OrderItemId = 2, Quantity = 3}
-					}, Accepted = false, Date = DateTime.Now }
-
+				new Item { Id = 1, AddedBy = 101, AddedOn = DateTime.Now, AvailableQuantity = 100, Name = "iPad Air 2 128GB LTE"}
 			};
 		}
 

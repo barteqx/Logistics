@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logistics.Domain.Model.Item
 {
-    class Item
+    public class Item
     {
         public int Id { get; set; }
 

@@ -8,11 +8,11 @@ using Logistics.Domain.Model.Item;
 
 namespace Logistics.Domain.Model.Order
 {
-    class OrderRecord
+    public class OrderRecord
     {
         public int Id { get; set; }
 
-        public Item.Item OrderItem { get; sets; }
+        public Item.Item OrderItem { get; set; }
 
         public int Quantity { get; set; }
     }

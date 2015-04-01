@@ -21,4 +21,3 @@ namespace Logistics.Domain.Model.User
         public Role Role { get; set; }
     }
 }
-s

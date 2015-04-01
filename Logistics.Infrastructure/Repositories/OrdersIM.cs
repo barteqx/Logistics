@@ -17,10 +17,15 @@ namespace Logistics.Infrastructure.Repositories
 		{
 			ordersList = new List<Order>
 			{
-				new Order { Id = 1, From = "Apple", OrderItems = new List<OrderRecord>{
-						new OrderRecord { Id = 1, OrderItemId = 2, Quantity = 3}
-					}, Accepted = false, Date = DateTime.Now }
-
+				new Order 
+                { 
+                    Id = 1, OrderItems = new List<OrderRecord> {
+                        new OrderRecord { Id = 1, OrderItem = 1, Quantity = 1 }
+                    }, OrderHistory = new List<OrderStatus> 
+                    {
+                        new OrderStatus { Id = 1, Comment = "", State = OrderStatus.OrderState.Accepted, ModifiedBy = 101}
+                    }
+                }
 			};
 		}
 
