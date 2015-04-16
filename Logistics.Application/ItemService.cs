@@ -5,16 +5,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Logistics.Infrastructure.Repositories;
+
 namespace Logistics.Application
 {
-    class ItemService : IItemService
+    public class ItemsService : IItemService
     {
-		public void CreateItem(Item order);
+        private IItemRepository itemRepository;
 
-		public void AlterItem(Item order);
 
-		public void DestroyItem(Item order);
+        public ItemsService()
+        {
+            itemRepository = new ItemsIM();
+        }
 
-		public List<Item> GetAllItems();
+        public ItemsService(IItemRepository itemRepository)
+        {
+            this.itemRepository = itemRepository;
+        }
+
+        public IList<Domain.Model.Item.Item> GetAllItems()
+        {
+            return itemRepository.FindAll();
+        }
+
+        public void CreateNewItem(Domain.Model.Item.Item p)
+        {
+            itemRepository.Insert(p);
+        }
+
+        public Item FindItem(int Id)
+        {
+            itemRepository.Find(Id);
+        }
+
+        public void DeleteItem(int Id)
+        {
+            itemRepository.Delete(Id);
+        }
     }
 }

@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Logistics.Domain.Model.Order;
+
 namespace Logistics.ObjectMothers
 {
-    class OrdersMother
+    public class OrdersMother
     {
+        
     }
 }

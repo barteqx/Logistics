@@ -19,7 +19,5 @@ namespace Logistics.Application
         public void DestroyItem(Item item);
 
         public List<Item> GetAllItems();
-
-
     }
 }

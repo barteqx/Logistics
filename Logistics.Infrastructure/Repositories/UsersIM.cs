@@ -24,11 +24,11 @@ namespace Logistics.Infrastructure.Repositories
             roles = new List<Role>
             {
                 new Role {Id = 100, RoleName = "Administrator", CanCreateAlterDeleteItems = true, CanCreateAlterDeleteUsers = true,
-                    CanCreateAlterDeleteRoles = true, CanCreateAlterDeleteUsers = true, CanSendUsers = true},
+                    CanCreateAlterDeleteRoles = true, CanCreateAlterDeleteOrders = true, CanSendOrders = true},
                 new Role {Id = 101, RoleName = "Manager", CanCreateAlterDeleteItems = true, CanCreateAlterDeleteUsers = false,
-                    CanCreateAlterDeleteRoles = false, CanCreateAlterDeleteUsers = true, CanSendUsers = true},
+                    CanCreateAlterDeleteRoles = false, CanCreateAlterDeleteOrders = true, CanSendOrders = true},
                 new Role {Id = 101, RoleName = "Manager", CanCreateAlterDeleteItems = false, CanCreateAlterDeleteUsers = false,
-                    CanCreateAlterDeleteRoles = false, CanCreateAlterDeleteUsers = false, CanSendUsers = true}
+                    CanCreateAlterDeleteRoles = false, CanCreateAlterDeleteOrders = false, CanSendOrders = true}
             };
 
             users = new List<User>

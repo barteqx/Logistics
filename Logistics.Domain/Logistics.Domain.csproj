@@ -37,8 +37,11 @@
     <Compile Include="Model\Delivery\DeliveryRecord.cs" />
     <Compile Include="Model\Delivery\Repositories\IDeliveryRepository.cs" />
     <Compile Include="Model\Order\Repositories\IOrderRepository.cs" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Model\Delivery\Delivery.hbm.xml" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Item\Item.cs" />
     <Compile Include="Model\Item\Repositories\IItemRepository.cs" />
@@ -50,7 +53,16 @@
     <Compile Include="Model\User\User.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Delivery\DeliveryRecord.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

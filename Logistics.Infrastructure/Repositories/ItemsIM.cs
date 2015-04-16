@@ -9,7 +9,7 @@ using Logistics.Domain.Model.Item;
 
 namespace Logistics.Infrastructure.Repositories
 {
-    class ItemsIM : IItemRepository
+    public class ItemsIM : IItemRepository
     {
 		public List<Item> itemsList;
 

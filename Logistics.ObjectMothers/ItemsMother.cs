@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logistics.ObjectMothers
 {
-    class ItemsMother
+    public class ItemsMother
     {
     }
 }

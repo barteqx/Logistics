@@ -53,6 +53,24 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logistics.Application\Logistics.Application.csproj">
+      <Project>{01b00d42-d7f5-4c76-b1e7-bc9f5d523fd3}</Project>
+      <Name>Logistics.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logistics.Domain\Logistics.Domain.csproj">
+      <Project>{c839ccfe-f30b-47f6-be56-026677c7e010}</Project>
+      <Name>Logistics.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logistics.Infrastructure\Logistics.Infrastructure.csproj">
+      <Project>{17a7cca3-466b-4179-9944-a426e8ce6205}</Project>
+      <Name>Logistics.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logistics.ObjectMothers\Logistics.ObjectMothers.csproj">
+      <Project>{c82e8c4b-d906-4769-b08f-a263d67a8691}</Project>
+      <Name>Logistics.ObjectMothers</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
