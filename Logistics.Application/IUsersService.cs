@@ -12,17 +12,17 @@ namespace Logistics.Application
     {
         public void CreateUser(User user);
 
-        public void AlterUser(User user);
-
         public void DestroyUser(User user);
+        
+        public User FindUser(int Id);
 
         public List<User> GetAllUsers();
 
         public void CreateRole(Role role);
 
-        public void AlterRole(Role role);
-
         public void DestroyRole(Role role);
+
+        public User FindUser(int Id);
 
         public List<Role> GetAllRoles();
     }

@@ -28,7 +28,7 @@ namespace Logistics.Application
             return orderRepository.FindAll();
         }
 
-        public void CreateNewOrder(Domain.Model.Order.Order p)
+        public void CreateOrder(Domain.Model.Order.Order p)
         {
             orderRepository.Insert(p);
         }
@@ -38,10 +38,9 @@ namespace Logistics.Application
 			return orderRepository.Find (Id);
 		}
 
-		public void DeleteOrder(int Id)
+		public void DestroyOrder(int Id)
 		{
 			orderRepository.Delete (Id);
 		}
-    }
     }
 }

@@ -63,6 +63,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\Delivery\DeliveryRecord.hbm.xml" />
+    <Content Include="hibernate.cfg.xml" />
+    <Content Include="Model\Item\Item.hbm.xml" />
+    <Content Include="Model\Order\OrderStatus.hbm.xml" />
+    <Content Include="Model\Order\OrderRecord.hbm.xml" />
+    <Content Include="Model\Order\Order.hbm.xml" />
+    <Content Include="Model\User\Role.hbm.xml" />
+    <Content Include="Model\User\User.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

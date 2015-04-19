@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Logistics.Infrastructure.Repositories;
+using Logistics.Domain.Model.Item.Repositories;
 
 namespace Logistics.Application
 {
@@ -29,17 +30,17 @@ namespace Logistics.Application
             return itemRepository.FindAll();
         }
 
-        public void CreateNewItem(Domain.Model.Item.Item p)
+        public void CreateItem(Domain.Model.Item.Item p)
         {
             itemRepository.Insert(p);
         }
 
-        public Item FindItem(int Id)
+        public Domain.Model.Item.Item FindItem(int Id)
         {
-            itemRepository.Find(Id);
+            return itemRepository.Find(Id);
         }
 
-        public void DeleteItem(int Id)
+        public void DestroyItem(int Id)
         {
             itemRepository.Delete(Id);
         }

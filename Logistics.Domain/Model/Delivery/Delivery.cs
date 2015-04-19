@@ -19,7 +19,7 @@ namespace Logistics.Domain.Model.Delivery
 
 		public void AddDeliveryRecord(DeliveryRecord DeliveryRecord)
 		{
-			DeliveryRecords.Add (DeliveryRecord);
+			DeliveryRecords.Add(DeliveryRecord);
 		}
 
 		public void DeleteDeliveryRecord(int Id)
@@ -28,5 +28,7 @@ namespace Logistics.Domain.Model.Delivery
                 if (item.Id == Id)
                     DeliveryRecords.Remove(item);
 		}
+
+        
     }
 }

@@ -14,7 +14,7 @@ namespace Logistics.Domain.Model.Item
 
         public int AvailableQuantity { get; set; }
 
-        public int AddedBy { get; set; }
+        public Logistics.Domain.Model.User.User AddedBy { get; set; }
 
         public DateTime AddedOn { get; set; }
     }

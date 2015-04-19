@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Logistics.Domain.Model.User" assembly="Login.Domain" default-lazy="true">
+  <class name="Osoba">
+    <id name="Id">
+      <generator class="native" />
+    </id>
+    <property name="Login" />
+    <property name="Name" />
+    <property name="Email" />
+    <property name="Password" />
+    <many-to-one name="Role" column="RoleID" class="Role />
+  </class>
+</hibernate-mapping>
